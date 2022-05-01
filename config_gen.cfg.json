@@ -1,0 +1,16 @@
+{
+    "theme_headers": [
+        "class", 
+        "border", 
+        "background", 
+        "text", 
+        "indicator", 
+        "child_border"
+    ],
+    "accepted_args": {
+        "--theme": "job",
+        "-t": "job",
+        "--main_config": "config",
+        "-mc": "config"
+    }
+}

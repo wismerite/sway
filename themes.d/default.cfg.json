@@ -1,0 +1,27 @@
+{
+    "window": {
+        "focused": [
+            "#4c7899", "#285577", "$light", "#84b167", "#285577"
+            ], 
+        "focused_inactive": [
+            "#333333", "#5f676a", "$light", "#484e50", "#5f676a"
+            ],   
+        "focused_tab_title": [
+            "#333333", "#5f676a", "$light", "#3daee9", "#3daee9"
+            ],
+        "unfocused": [
+            "#333333", "#222222", "#888888", "#292d2e", "#222222"
+            ],
+        "urgent": [
+            "#2f343a", "#900000", "$light", "#900000", "#900000"
+            ],
+        "placeholder": [
+            "#000000", "#0c0c0c", "$light", "#000000", "#0c0c0c"
+            ]
+        },
+    "color_vars": {
+        "dark": "#323232",
+        "medium": "#5c5c5c",
+        "light": "#ffffff"
+    }
+}

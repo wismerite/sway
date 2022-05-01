@@ -1,0 +1,27 @@
+{
+    "window": {
+        "focused": [
+            "#4c515b","#d3a7d2","#4c515b","#d1b263","#4c515b"
+            ], 
+        "focused_inactive": [
+            "#333333", "#5f676a", "#ffffff", "#484e50", "#5f676a"
+            ],   
+        "focused_tab_title": [
+            "#333333", "#5f676a", "#ffffff", "#3daee9", "#3daee9"
+            ],
+        "unfocused": [
+            "#333333", "#222222", "#888888", "#292d2e", "#222222"
+            ],
+        "urgent": [
+            "#2f343a", "#900000", "#ffffff", "#900000", "#900000"
+            ],
+        "placeholder": [
+            "#000000", "#0c0c0c", "#ffffff", "#000000", "#0c0c0c"
+            ]
+    },
+    "color_vars": {
+        "dark": "#D1B263",
+        "medium": "#84B167",
+        "light": "#D3A7D2"
+    }
+}
