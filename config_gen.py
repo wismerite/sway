@@ -1,6 +1,7 @@
 import json
 import logging
 from sys import argv
+from os import getenv
 
 # setup, arg resolution
 with open('config_gen.cfg.json') as config:
@@ -11,27 +12,29 @@ logger.debug(config)
 #print(config)
 
 # hardcoded filename cause this is what sway expects
-output_file = open('config', 'wb')
+output_file = open(f'config', 'wb')
 
-passed_args = list(argv)
+script_args = list(argv)
 
 resolved_args = {
     "main_config": 'main.cfg',
     "themes_dir": 'themes.d',
     "cfg_ext": "cfg.json",
-    "jobs": {},
+    "jobs": {
+        "theme": "default"
+        },
     "includes_file": "config.d/includes.cfg"
 }
 
 for arg, arg_type in config['accepted_args'].items():
-    if arg in passed_args:
+    if arg in script_args:
         plain_arg = arg.replace('-', '')
         # only supporting one arg per job for now
-        arg_value_index = passed_args.index(arg) + 1
+        arg_value_index = script_args.index(arg) + 1
         if arg_type == 'job':
-            resolved_args['jobs'][plain_arg] = passed_args[arg_value_index]
+            resolved_args['jobs'][plain_arg] = script_args[arg_value_index]
         elif arg_type == 'config':
-            resolved_args[plain_arg] = passed_args[arg_value_index]
+            resolved_args[plain_arg] = script_args[arg_value_index]
         else:
             raise Exception("Uknown arg and arg type: {arg} : {arg_type}")
 
